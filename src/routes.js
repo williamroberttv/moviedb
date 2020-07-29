@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import Details from './pages/Details';
 
 function Routes() {
-  <BrowserRouter>
-    <Route exact path="/" component={Home} />
-    <Route path="/filme" component={Details} />
-  </BrowserRouter>;
+  return (
+    <BrowserRouter>
+      <Route exact path="/" component={Home} />
+      <Route path="/filme" component={Details} />
+    </BrowserRouter>
+  );
 }
 
 export default Routes;
