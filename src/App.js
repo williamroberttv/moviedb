@@ -1,9 +1,13 @@
-import React from "react";
-import "./App.css";
-import Routes from "./routes";
+import React from 'react';
+import Routes from './routes';
+import { MovieIdProvider } from './Context/ContextProvider';
 
 function App() {
-  return <Routes />;
+  return (
+    <MovieIdProvider>
+      <Routes />
+    </MovieIdProvider>
+  );
 }
 
 export default App;
