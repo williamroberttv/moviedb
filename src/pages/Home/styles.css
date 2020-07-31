@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  margin: 30px 20px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: #ff7e6b 1px solid;
+}
+header img {
+  width: 30px;
+  margin-right: 10px;
+}
+header span {
+  color: #ff7e6b;
+}
+header h1 {
+  font-size: 22px;
+  margin-right: 50px;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.search input {
+  border: none;
+  border-bottom: 1px solid #636363;
+  outline: none;
+  font-size: 14px;
+  width: 100px;
+}
+.input-display {
+  display: none;
+}
+.search button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+}
+.scroll-container:first-child {
+  margin-left: 20px;
+}
+.scroll-container p {
+  font-size: 12px;
+}
+.top-rated,
+.upcoming,
+.popular {
+  margin: 70px 0;
+}
+.top-rated-header,
+.nowplaying-header,
+.searched-movies-header,
+.upcoming-header,
+.popular-header {
+  margin: 10px 25px;
+  font-size: 18px;
+}
+.top-rated-header p,
+.nowplaying-header p,
+.upcoming-header p,
+.searched-movies-header p,
+.popular-header p {
+  font-size: 14px;
+  margin: 10px 0 30px 0;
+  color: #636363;
+}
+.searched-movie,
+.nowplaying-movie {
+  margin-right: 20px;
+  width: 360px;
+  height: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.searched-movie img,
+.nowplaying-movie img {
+  cursor: pointer;
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+}
+.searched-movie img:hover,
+.nowplaying-movie img:hover {
+  width: 352px;
+  height: 202px;
+}
+.rate {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.top-rated-movie,
+.upcoming-movie,
+.popular-movie {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+.top-rated-movie img,
+.upcoming-movie img,
+.popular-movie img {
+  cursor: pointer;
+  width: 180px;
+  border-radius: 10px;
+}
+.top-rated-movie img:hover,
+.upcoming-movie img:hover,
+.popular-movie img:hover {
+  width: 182px;
+}
+
+.searched-movie h3,
+.nowplaying-movie h3,
+.top-rated-movie h3,
+.upcoming-movie h3,
+.popular-movie h3 {
+  font-size: 14px;
+  width: 100%;
+  margin: 10px 0;
+  height: 40px;
+}
