@@ -16,3 +16,12 @@ code {
 img {
   transition: ease 400ms;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+iframe {
+  margin-right: 10px;
+}

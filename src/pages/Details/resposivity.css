@@ -1,0 +1,23 @@
+@media (max-width: 670px) {
+  .movie-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  .poster {
+    margin: 0;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .details p {
+    width: 100%;
+  }
+  .genres {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

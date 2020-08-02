@@ -1,24 +1,22 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
-}
-header {
+.home-header {
   display: flex;
   margin: 30px 20px;
   align-items: center;
   padding-bottom: 10px;
   border-bottom: #ff7e6b 1px solid;
 }
-header img {
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container img {
   width: 30px;
   margin-right: 10px;
 }
-header span {
+.logo-container span {
   color: #ff7e6b;
 }
-header h1 {
+.logo-container h1 {
   font-size: 22px;
   margin-right: 50px;
 }
@@ -48,55 +46,38 @@ header h1 {
 .scroll-container {
   display: flex;
   flex-direction: row;
-}
-.scroll-container:first-child {
-  margin-left: 20px;
+  padding: 10px;
 }
 .scroll-container p {
   font-size: 12px;
 }
-.top-rated,
-.upcoming,
-.popular {
+.vertical-section {
   margin: 70px 0;
 }
-.top-rated-header,
-.nowplaying-header,
-.searched-movies-header,
-.upcoming-header,
-.popular-header {
+.horizontal-header,
+.vertical-header {
   margin: 10px 25px;
   font-size: 18px;
 }
-.top-rated-header p,
-.nowplaying-header p,
-.upcoming-header p,
-.searched-movies-header p,
-.popular-header p {
+.horizontal-header p,
+.vertical-header p {
   font-size: 14px;
   margin: 10px 0 30px 0;
   color: #636363;
 }
-.searched-movie,
-.nowplaying-movie {
+.horizontal-movie {
   margin-right: 20px;
-  width: 360px;
+  width: 500px;
   height: 285px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.searched-movie img,
-.nowplaying-movie img {
-  cursor: pointer;
+.horizontal-movie img {
+  cursor: grab;
   width: 350px;
   height: 200px;
   border-radius: 20px;
-}
-.searched-movie img:hover,
-.nowplaying-movie img:hover {
-  width: 352px;
-  height: 202px;
 }
 .rate {
   display: flex;
@@ -104,36 +85,43 @@ header h1 {
   justify-content: flex-start;
   margin: 10px 0;
 }
-
-.top-rated-movie,
-.upcoming-movie,
-.popular-movie {
+.vertical-movie {
   margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
 }
-.top-rated-movie img,
-.upcoming-movie img,
-.popular-movie img {
-  cursor: pointer;
+.vertical-movie img {
+  cursor: grab;
   width: 180px;
   border-radius: 10px;
 }
-.top-rated-movie img:hover,
-.upcoming-movie img:hover,
-.popular-movie img:hover {
-  width: 182px;
-}
 
-.searched-movie h3,
-.nowplaying-movie h3,
-.top-rated-movie h3,
-.upcoming-movie h3,
-.popular-movie h3 {
+.horizontal-movie h3,
+.vertical-movie h3 {
   font-size: 14px;
   width: 100%;
   margin: 10px 0;
   height: 40px;
+}
+.img-container {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  top: 30%;
+  cursor: pointer;
+}
+.icon:hover,
+.icon-vertical:hover {
+  opacity: 0.7;
+}
+.icon-vertical {
+  left: 25%;
+  top: 30%;
+  position: absolute;
+  cursor: pointer;
 }

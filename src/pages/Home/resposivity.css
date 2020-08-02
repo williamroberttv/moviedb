@@ -1,0 +1,25 @@
+@media (max-width: 440px) {
+  .horizontal-movie img {
+    width: 300px;
+    height: 170px;
+  }
+}
+@media (max-width: 350px) {
+  .home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .logo-container h1 {
+    margin: 0;
+  }
+  .horizontal-movie img {
+    width: 280px;
+    height: 150px;
+  }
+}
