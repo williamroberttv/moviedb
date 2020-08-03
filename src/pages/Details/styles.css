@@ -7,6 +7,9 @@
 .details-header {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
+  margin: 30px 0;
+  border-bottom: #ff7e6b 1px solid;
 }
 .details-header p {
   margin-left: 10px;
