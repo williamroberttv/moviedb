@@ -37,8 +37,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - ### **Pré-requisitos**
 
-  - É **necessário** possuir o **[Node.js](https://nodejs.org/en/)** instalado na máquina
-  - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
+  - É **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
 
 1. Faça um clone :
 
