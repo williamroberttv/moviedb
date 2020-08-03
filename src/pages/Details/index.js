@@ -9,9 +9,7 @@ import ScrollContainer from 'react-indiana-drag-scroll';
 
 function Details() {
   const { movieId } = useMovieId();
-  const [storagedId, setStoragedId] = useState(
-    localStorage.getItem('movie_id')
-  );
+  const storagedId = localStorage.getItem('movie_id');
   const [movieDetail, setMovieDetail] = useState([]);
   const [genres, setGenres] = useState([]);
   const [videos, setVideos] = useState([]);
@@ -29,7 +27,6 @@ function Details() {
         setMovieDetail(response.data);
         setGenres(response.data.genres);
       });
-    if (movieId) setStoragedId(localStorage.setItem('movie_id', movieId));
     return;
   }
   function getVideos() {
@@ -45,7 +42,7 @@ function Details() {
   useEffect(() => {
     renderMovieDetails();
     getVideos();
-  }, []);
+  });
 
   return (
     <div className="container">

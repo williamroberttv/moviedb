@@ -25,18 +25,19 @@ function Home() {
     });
   }
 
-  function getSearchedMovies() {
+  function getSearchedMovies(event) {
+    setMovieInput(event);
     api
       .get(`search/movie?api_key=${apiKey}&language=pt-BR&query=${movieInput}`)
       .then((response) => {
         setSearchedMovies(response.data.results);
-        console.log(response.data.results);
       });
     setShowSearchedSection(true);
   }
 
   function getMovieDetails(id) {
     handleMovieId(id);
+    localStorage.setItem('movie_id', id);
     history.push('/movie');
   }
 
@@ -72,10 +73,7 @@ function Home() {
           <input
             type="text"
             placeholder="Buscar"
-            onChange={(event) => setMovieInput(event.target.value)}
-            onKeyDown={(event) =>
-              event.keyCode === 13 ? getSearchedMovies() : false
-            }
+            onChange={(event) => getSearchedMovies(event.target.value)}
           />
         </div>
       </header>
