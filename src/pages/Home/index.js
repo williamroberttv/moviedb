@@ -19,6 +19,7 @@ function Home() {
 
   const history = useHistory();
   const { handleMovieId } = useMovieId();
+
   function renderMovies(path, spot) {
     api.get(`${path}?api_key=${apiKey}&language=pt-BR`).then((response) => {
       spot(response.data.results);
@@ -33,6 +34,7 @@ function Home() {
         setSearchedMovies(response.data.results);
       });
     setShowSearchedSection(true);
+    if (event === '') setShowSearchedSection(false);
   }
 
   function getMovieDetails(id) {
@@ -43,19 +45,10 @@ function Home() {
 
   useEffect(() => {
     renderMovies('movie/popular', setPopularMovies);
-  }, [popularMovies]);
-
-  useEffect(() => {
     renderMovies('movie/top_rated', setTopRatedMovies);
-  }, [topRatedMovies]);
-
-  useEffect(() => {
     renderMovies('movie/upcoming', setUpcomingMovies);
-  }, [upcomingMovies]);
-
-  useEffect(() => {
     renderMovies('movie/now_playing', setNowPlayingMovies);
-  }, [nowPlayingMovies]);
+  }, []);
 
   return (
     <div className="container">
@@ -72,6 +65,7 @@ function Home() {
           </button>
           <input
             type="text"
+            data-testid="input-field"
             placeholder="Buscar"
             onChange={(event) => getSearchedMovies(event.target.value)}
           />
@@ -80,6 +74,7 @@ function Home() {
       <section className="main">
         {showSearchedSection ? (
           <SectionPosterHorizontal
+            test={'searched-field'}
             details={getMovieDetails}
             title={'Busca'}
             description={`Todos os resultados para ${movieInput}`}

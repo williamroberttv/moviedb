@@ -73,6 +73,7 @@
 }
 .videos-container-main {
   display: flex;
+  padding: 15px;
 }
 .videos-container-header {
   margin: 20px 0;

@@ -5,7 +5,7 @@ import { imgUrl } from '../services/api';
 
 function SectionPosterHorizontal(props) {
   return (
-    <div className="horizontal-section">
+    <div className="horizontal-section" data-testid={props.test}>
       <div className="horizontal-header">
         <h3>{props.title}</h3>
         <p>{props.description}</p>

@@ -15,21 +15,14 @@ function Details() {
   const [videos, setVideos] = useState([]);
 
   const history = useHistory();
+
   function handleNavigateBack() {
     localStorage.clear();
     history.push('/');
   }
 
-  function renderMovieDetails() {
-    api
-      .get(`movie/${movieId || storagedId}?api_key=${apiKey}&language=pt-BR`)
-      .then((response) => {
-        setMovieDetail(response.data);
-        setGenres(response.data.genres);
-      });
-    return;
-  }
-  function getVideos() {
+  //getMovieDetails
+  useEffect(() => {
     api
       .get(
         `movie/${movieId || storagedId}/videos?api_key=${apiKey}&language=en-US`
@@ -37,12 +30,17 @@ function Details() {
       .then((response) => {
         setVideos(response.data.results);
       });
-  }
+  }, [movieId, storagedId]);
 
+  //getVideos
   useEffect(() => {
-    renderMovieDetails();
-    getVideos();
-  });
+    api
+      .get(`movie/${movieId || storagedId}?api_key=${apiKey}&language=pt-BR`)
+      .then((response) => {
+        setMovieDetail(response.data);
+        setGenres(response.data.genres);
+      });
+  }, [movieId, storagedId]);
 
   return (
     <div className="container">
@@ -87,7 +85,8 @@ function Details() {
                       frameBorder="0"
                       allowFullScreen
                       title="video"
-                    />
+                      height="170px"
+                    ></iframe>
                   </div>
                 ) : (
                   false
